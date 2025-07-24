@@ -28,7 +28,7 @@ body {
 
 .header {
     margin: 15px;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .inputArea {
@@ -62,12 +62,19 @@ body {
 }
 
 h2 {
-    margin-bottom: 2%;
+    font-size: 1.2em;
 }
 
+.noTasks {
+    color: #f2ff7c;
+    margin: 15px;
+    font-size: 0.9em;
+}
 
 .counter-container {
     border-top: 1px solid #B0C4DE;
+    padding: 5px;
+    margin-top: 5px;
 }
 
 
