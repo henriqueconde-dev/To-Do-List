@@ -13,6 +13,7 @@ function addTask() {
         return;
     }
 
+
     //Criando a lista com as tarefas
     const li = document.createElement("li")
 
@@ -21,8 +22,10 @@ function addTask() {
       <input type="checkbox">
       <span>${task}</span>
     </label>
-    <span class="edit-btn">Edit</span>
-    <span class="delete-btn">Delete</span>
+    <div class="buttonsRight">
+    <span class="edit-btn">EDIT</span>
+    <span class="delete-btn">DELETE</span>
+    </div>
     `;
 
     //Adicionando a lista a ul 
@@ -32,7 +35,7 @@ function addTask() {
     inputValue.value = ""
 
 
-//Armazenando todos os botões, e textos de span em uma variavel
+    //Armazenando todos os botões, e textos de span em uma variavel
     const checkbox = li.querySelector("input")
     const editBtn = li.querySelector(".edit-btn")
     const deleteBtn = li.querySelector(".delete-btn")
@@ -56,15 +59,18 @@ function addTask() {
 
         checkbox.checked = false
         updateCounters()
+        noTaskScan();
 
     })
 
     //Remover a tarefa
-    deleteBtn.addEventListener("click",function() {
+    deleteBtn.addEventListener("click", function () {
         if (confirm("Você tem certeza de que deseja excluir esta tarefa?")) {
             li.remove()
-            updateCounters()
+
         }
+        updateCounters();
+        noTaskScan();
     })
 
     //Contador de tarefa
@@ -79,5 +85,22 @@ function addTask() {
         uncompletedCounter.textContent = taskUncompleted
 
     }
-    updateCounters() //Está função tem que está declarada após cada ação, para sempre reiniciar o contador
+    updateCounters(); //Está função tem que está declarada após cada ação, para sempre reiniciar o contador
+
+
+    //Apagar texto de não ter tarefa, após adicionar tarefa
+
+    function noTaskScan() {
+        const noTask = document.getElementById("no-task")
+        const tasks = document.querySelectorAll("li")
+
+        if (tasks.length > 0) {
+            noTask.style.display = "none";
+        }
+        else {
+            noTask.style.display = "block";
+        }
+    }
+
+    noTaskScan();
 }
