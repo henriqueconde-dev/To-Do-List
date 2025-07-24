@@ -15,24 +15,27 @@
             <h1>To Do List</h1>
         </div>
 
-        <div id="toDo-form">
-            <input type="text" class="input-item" id="input-box" name="input-box" placeholder="Digitar tarefa"></input>
-        </div>
+        <div class="inputButton">
+            <div id="toDo-form">
+                <input type="text" class="input-item" id="input-box" name="input-box"
+                    placeholder="Digitar tarefa"></input>
+            </div>
 
-        <button id="input-button" onclick="addTask()">Adicionar tarefa</button>
+            <button id="input-button" onclick="addTask()">Adicionar</button>
+        </div>
 
         <h2>Lista de Tarefas</h2>
         <ul id="list-container"></ul>
-    </div>
-    
-    <hr />
 
-    <div class="counter-container">
-        <div class="task-counter">
-            Tarefas completas: <span id="completed-counter">0</span> | Tarefas Incompletas <span
-                id="uncompleted-counter">0</span>
+
+        <hr />
+
+        <div class="counter-container">
+            <div class="task-counter">
+                Tarefas completas: <span id="completed-counter">0</span> | Tarefas Incompletas <span
+                    id="uncompleted-counter">0</span>
+            </div>
         </div>
-    </div>
     </div>
 
     <script src="scripts.js"></script>
