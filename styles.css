@@ -7,6 +7,11 @@
 }
 
 
+/*Pensar em algo melhor*/
+body {
+    background-color: PowderBlue;
+}
+
 .toDo-container {
     width: 100%;
     max-width: 500px;
@@ -15,7 +20,11 @@
     flex-direction: column;
     text-align: center;
     padding: 20px 10px;
-    background-color: gray;
+    color: rgb(82, 82, 82);
+    background-color: rgb(255, 255, 255);
+    box-shadow: -1px 1px 41px 8px rgba(30, 144, 255, 0.75);
+    -webkit-box-shadow: -1px 1px 41px 8px rgba(30, 144, 255, 0.75);
+    -moz-box-shadow: -1px 1px 41px 8px rgba(30, 144, 255, 0.75);
     border-radius: 10px;
     height: 200px;
 }
@@ -25,12 +34,14 @@
     justify-content: center;
     gap: 20px;
     padding: 10px 0;
+
 }
 
 .inputArea .input-item {
     padding: 7px;
     border-radius: 5px;
     border: none;
+    border: 2px solid rgb(82, 82, 82);
 }
 
 .inputArea .input-Button {
@@ -39,4 +50,9 @@
     background-color: #1E90FF;
     border: 1px solid #E0FFFF;
     font-weight: 600;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }
