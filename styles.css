@@ -9,31 +9,33 @@
 
 /*Pensar em algo melhor*/
 body {
-    background-color: PowderBlue;
+    background-color: #B0C4DE;
+    margin-top: 13%;
 }
 
 .toDo-container {
     width: 100%;
     max-width: 500px;
-    margin: 250px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 20px 10px;
-    color: rgb(82, 82, 82);
-    background-color: rgb(255, 255, 255);
-    box-shadow: -1px 1px 41px 8px rgba(30, 144, 255, 0.75);
-    -webkit-box-shadow: -1px 1px 41px 8px rgba(30, 144, 255, 0.75);
-    -moz-box-shadow: -1px 1px 41px 8px rgba(30, 144, 255, 0.75);
-    border-radius: 10px;
-    height: 200px;
+    color: #B0C4DE;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+.header {
+    margin: 15px;
+    font-size: 1.2em;
 }
 
 .inputArea {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 10px 0;
+    margin-bottom: 20px;
 
 }
 
@@ -48,10 +50,28 @@ body {
     border-radius: 5px;
     padding: 0px 10px;
     background-color: #1E90FF;
-    border: 1px solid #E0FFFF;
+    border: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
+.input-Button:hover{
+    background-color: #00008B;
+    color: #fff;
+    transition: 1.5s ease;
+}
+
+h2 {
+    margin-bottom: 2%;
+}
+
+
+.counter-container {
+    border-top: 1px solid #B0C4DE;
+}
+
+
+/*Quando marcar a lista como concluida*/
 .completed {
   text-decoration: line-through;
   color: gray;
