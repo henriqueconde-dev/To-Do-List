@@ -2,22 +2,41 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
 }
+
 
 .toDo-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     margin: 250px auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 20px 10px;
+    background-color: gray;
+    border-radius: 10px;
+    height: 200px;
 }
 
-.inputButton {
+.inputArea {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 10px 0;
+}
+
+.inputArea .input-item {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+}
+
+.inputArea .input-Button {
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: #1E90FF;
+    border: 1px solid #E0FFFF;
+    font-weight: 600;
 }
